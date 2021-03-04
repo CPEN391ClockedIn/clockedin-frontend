@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1009461194538",
+    "project_id": "clockinin-4b467",
+    "storage_bucket": "clockinin-4b467.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1009461194538:android:dddaae3765fa607e4c7853",
+        "android_client_info": {
+          "package_name": "com.example.clockedin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1009461194538-7t49gnl6nthn2pcou1r9hplmujlhhek1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYq28YakAnjcQODF2UENoCp40WRycTXqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1009461194538-7t49gnl6nthn2pcou1r9hplmujlhhek1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
