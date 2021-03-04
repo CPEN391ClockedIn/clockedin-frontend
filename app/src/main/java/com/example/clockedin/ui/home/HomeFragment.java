@@ -1,8 +1,5 @@
 package com.example.clockedin.ui.home;
 
-import android.Manifest;
-import android.bluetooth.BluetoothAdapter;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,8 +9,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.example.clockedin.MainActivity;
@@ -35,9 +30,11 @@ import okhttp3.Response;
 public class HomeFragment extends Fragment implements View.OnClickListener {
     private static final String TAG = "HomeFragment";
     private User user;
-    private TextView text_date, text_tmp;
+    private TextView text_date;
+    private TextView text_tmp;
     private Button button_out;
-    private String string_date, string_tmp;
+    private String string_date;
+    private String string_tmp;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {

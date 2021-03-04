@@ -30,9 +30,11 @@ import okhttp3.Response;
 public class ProfileFragment extends Fragment implements View.OnClickListener {
     private static final String TAG = "ProfileFragment";
     private User user;
-    private TextView text_name, text_email;
+    private TextView text_name;
+    private TextView text_email;
     private Button button;
-    private String string_name, string_email;
+    private String string_name;
+    private String string_email;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {

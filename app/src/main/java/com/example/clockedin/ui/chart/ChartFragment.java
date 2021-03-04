@@ -36,9 +36,11 @@ public class ChartFragment extends Fragment implements AdapterView.OnItemSelecte
     private static final String TAG = "ChartFragment";
     private User user;
     private LineChart chart;
-    private Spinner spinner_year, spinner_month;
-    private String string_year = "2021", string_month = "02";
-    LineDataSet set;
+    private Spinner spinner_year;
+    private Spinner spinner_month;
+    private String string_year = "2021";
+    private String string_month = "02";
+    private LineDataSet set;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {

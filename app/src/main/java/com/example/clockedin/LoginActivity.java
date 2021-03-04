@@ -19,9 +19,11 @@ import java.io.IOException;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "LoginActivity";
-    private EditText text_email, text_password;
+    private EditText text_email;
+    private EditText text_password;
     private Button button;
-    private String string_email, string_pwd;
+    private String string_email;
+    private String string_pwd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

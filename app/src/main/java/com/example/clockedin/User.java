@@ -7,7 +7,6 @@ public class User implements Parcelable {
     private String token;
     private String name;
     private String email;
-    private String password;
 
     public static final Creator<User> CREATOR = new Creator<User>() {
         @Override

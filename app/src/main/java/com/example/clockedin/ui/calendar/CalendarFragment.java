@@ -16,7 +16,6 @@ import com.example.clockedin.R;
 import com.example.clockedin.ServerCommu;
 import com.example.clockedin.User;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.IOException;
@@ -28,8 +27,10 @@ public class CalendarFragment extends Fragment implements CalendarView.OnDateCha
     private static final String TAG = "CalendarFragment";
     private User user;
     private CalendarView calendar;
-    private TextView text_in, text_out;
-    private String string_in, string_out;
+    private TextView text_in;
+    private TextView text_out;
+    private String string_in;
+    private String string_out;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -45,7 +46,9 @@ public class CalendarFragment extends Fragment implements CalendarView.OnDateCha
 
     @Override
     public void onSelectedDayChange(CalendarView calendarView, int i, int i1, int i2) {
-        String year = String.valueOf(i), month = String.valueOf(i1+1), day = String.valueOf(i2);
+        String year = String.valueOf(i);
+        String month = String.valueOf(i1+1);
+        String day = String.valueOf(i2);
         if (i1 < 10) { month = "0" + month; }
         if (i2 < 10) { day = "0" + day; }
         getClockInOutTime(year + "-" + month + "-" + day);
