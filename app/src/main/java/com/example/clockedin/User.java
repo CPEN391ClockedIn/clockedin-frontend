@@ -26,7 +26,6 @@ public class User implements Parcelable {
     }
 
     public String getToken() { return token; }
-
     public void setToken(String token) { this.token = token; }
 
     protected User(Parcel in) {

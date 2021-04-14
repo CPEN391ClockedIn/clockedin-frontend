@@ -1,5 +1,6 @@
 package com.example.clockedin.ui.chart;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -38,8 +39,8 @@ public class ChartFragment extends Fragment implements AdapterView.OnItemSelecte
     private LineChart chart;
     private Spinner spinner_year;
     private Spinner spinner_month;
-    private String string_year = "2021";
-    private String string_month = "02";
+    private String string_year;
+    private String string_month;
     private LineDataSet set;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -101,22 +102,25 @@ public class ChartFragment extends Fragment implements AdapterView.OnItemSelecte
                     for (int i = 0; i < responseJson.length(); i++) {
                         JSONObject recordJson = responseJson.getJSONObject(i);
                         String day = "";
-                        int temperature = 0;
+                        double temperature = 0;
                         if (recordJson.has("date")) {
                             day = recordJson.getString("date");
                         }
                         if (recordJson.has("temperature")) {
-                            temperature = recordJson.getInt("temperature");
+                            temperature = recordJson.getDouble("temperature");
                         }
-                        entries.add(new Entry(Integer.parseInt(day.substring(8,10)), temperature));
+                        entries.add(new Entry(Integer.parseInt(day.substring(8,10)), (float)temperature));
                     }
+                    Log.d(TAG, "entries are: " + entries);
+                    Log.d(TAG, "temperatures are: " + responseJson);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
                 if (response.isSuccessful()) {
                     Log.d(TAG, "get temperature is successful");
                     set = new LineDataSet(entries, "");
-                    set.setLineWidth(5);
+                    set.setLineWidth(3);
+                    set.setColor(Color.parseColor("#7E1FB9"));
                     set.setDrawCircles(false);
                     set.setDrawValues(false);
                     set.setDrawHighlightIndicators(false);
